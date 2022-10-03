@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/myrecomm-364405/myapp:v1', '.']
+  args: ['build', '-t', 'gcr.io/myrecomm-364405/app:v1', '.']
   timeout: 180s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/myrecomm-364405/myapp:v1']
+  args: ['push', 'gcr.io/myrecomm-364405/app:v1']
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: "bash"
   args:
